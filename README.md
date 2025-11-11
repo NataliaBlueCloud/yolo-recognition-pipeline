@@ -29,6 +29,10 @@ This repository combines a **Google Colab training pipeline** with a **real-time
 
 ## 🧠 Training Example  
 
+The dataset was labelled in Label Studio:
+![Example 1.](example/1.png)
+
+
 Run the following command inside Colab to train the model:
 ```bash
 !yolo detect train data=/content/data.yaml model=yolo11s.pt epochs=60 imgsz=640
@@ -46,6 +50,16 @@ The best weights will be saved at:
 | **sugar**  | 0.97 | 1.00 | 0.99 | 0.69 |
 | **tea**    | 0.96 | 1.00 | 0.99 | 0.88 |
 
+
+---
+
+After training, the model is tested on the validation dataset.  
+Below is an example of the detection results:
+
+<p align="center">
+  <img src="example/2.png" alt="Example detection result" width="600"/>
+</p>
+
 ---
 
 ### 🖥️ Real-Time Inference
@@ -56,7 +70,7 @@ python Yolo_Trade_AI.py
 ```
 
 
-Press q to close the overlay window.
+Press `q` to close the overlay window.
 The script uses:
 
 
